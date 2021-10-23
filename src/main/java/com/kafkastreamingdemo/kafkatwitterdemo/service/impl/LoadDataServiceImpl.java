@@ -31,7 +31,7 @@ public class LoadDataServiceImpl implements LoadDataService {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType( MediaType.APPLICATION_JSON );
         headers.set( "Authorization",
-            "Bearer AAAAAAAAAAAAAAAAAAAAAIvSUQEAAAAAyoAqahLTHVrc%2FbcFlG%2BuQoLGPzE%3DNZtwqt18SSTMoGdLjjvf0qnHHktqrMRsWSeLRLjzl49Qry7Gwd" );
+            "Bearer <<TOKEN>>" );
         ResponseEntity<Object> responseEntity = restTemplate.exchange(
             "https://api.twitter.com/2/tweets/search/recent?query=(sangam) lang:en&tweet.fields=author_id,created_at,in_reply_to_user_id,lang,source",
             HttpMethod.GET, new HttpEntity<>( headers ), Object.class, new Objects[ 0 ] );
