@@ -19,13 +19,13 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @Configuration
 @EnableScheduling
-public class KafkaTwitterDemoApplication {
+public class KafkaTwitterProducerApplication {
 
     @Value( "${spring.kafka.producer.bootstrap-servers}" )
     private String brokers;
 
     public static void main(String[] args) {
-        SpringApplication.run( KafkaTwitterDemoApplication.class, args );
+        SpringApplication.run( KafkaTwitterProducerApplication.class, args );
     }
 
     @Bean( "kafkaTemplate" )
